@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+</head>
+<body>
+  <div class="container-xl">
+    <div class="row pt-5">
+      
+      
+      
+      
+      <div class="col-6 border p-5 bg-success me-5 shadow p-3 mb-5 bg-secondary rounded">
+        <form class="js-add-contact" action="https://echo.htmlacademy.ru" method="post">
+          
+          <label class="text-info fw-bold pb-3" for="">Name</label>
+          <input class="rounded pt-1 pb-1 ps-4 pe-4 d-block js-name" placeholder="Name" type="text">
+          <label class="text-info fw-bold pb-3 pt-3" for="">Last Name</label>
+          <input class="rounded pt-1 pb-1 ps-4 pe-4 d-block js-last-name" placeholder="Last Name" type="text">
+          <label class="text-info fw-bold pb-3 pt-3" for="phone-number">Phone Number</label>
+          <input class="rounded pt-1 pb-1 ps-4 pe-4 d-block js-number" placeholder="Phone Number" type="tel" id="phone-number">
+          
+          <button class="btn btn-primary mt-4 add-btn" type="button">Add Contact</button>
+        </form>
+      </div>
+      
+      <div class="col-5 border p-5 ">
+        <ul class="js-contact-list list-unstyled">
+         
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</body>
+<script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./js/script.js"></script>
+</html>
