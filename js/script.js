@@ -17,11 +17,15 @@ let appendElementCotacts = function() {
   for(let i = 0; i < conatcts.length; i++) {
     
     let NewLi = document.createElement("li")
-    NewLi.innerHTML = `
-    <p><span class="text-info fw-bold me-2" >Name:</span><span>${(conatcts[i].name)}</span></p>
-    <p><span class="text-info fw-bold me-2" >Last Name:</span><span>${(conatcts[i].lastName)}</span></p>
-    <p><span class="text-info fw-bold me-2" >Phone Number:</span><span>${(conatcts[i].number)}</span></p>
-    `
+    
+    let NewContactName = createElement ( "p", "answer-text", conatcts[i].name);
+    
+    let NewContactLastName = createElement ( "p", "answer-list", conatcts[i].lastName);
+    
+    let NewContactNumber = createElement("p","answer", conatcts[i].number)
+    
+    
+    NewLi.append(NewContactName,NewContactLastName,NewContactNumber)
     elContactList.append(NewLi);
   }
   elNameInput.value = null;
@@ -46,17 +50,21 @@ elAddBtn.addEventListener("click", function(e) {
     elLastName.style.borderColor = "red";
     return
   }
-  if (number == "" || number.length < 3 || number.length >9) {
+  if (number == "" || number.length < 3 || number.length > 9 || isNaN(number)) {
     elNumberInput.style.borderColor = "red";
     return
   }
-  elNameInput.style.borderColor= "#000"
+
+  elNameInput.style.borderColor= "#000";
+  elLastName.style.borderColor= "#000";
+  elNumberInput.style.borderColor= "#000";
   
   conatcts.push({
     name,
     lastName,
     number,
   })
+
   elContactList.innerHTML ="";
   
   console.log(conatcts);

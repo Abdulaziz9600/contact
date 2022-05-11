@@ -1,0 +1,21 @@
+.answer-text::before {
+  content: "Name:";
+  color: rgb(14, 88, 185);
+  font-weight: 700;
+  position: relative;
+  left: -3px;
+}
+.answer-list::before {
+  content: "LastName:";
+  color: rgb(14, 88, 185);
+  font-weight: 700;
+  position: relative;
+  left: -3px;
+}
+.answer::before {
+  content: "PhnoneNumber:";
+  color: rgb(14, 88, 185);
+  font-weight: 700;
+  position: relative;
+  left: -3px;
+}
